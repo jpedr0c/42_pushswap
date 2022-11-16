@@ -18,7 +18,7 @@ void sa_move(t_stacks *stack, int print)
 
   if (stack->size_a == 0 || stack->size_a == 1)
   {
-    if (print == STACK)
+    if (print == ERR)
       ft_printf("Very few numbers in Stack A. Try again!\n");
     return ;
   }
@@ -26,7 +26,7 @@ void sa_move(t_stacks *stack, int print)
   tmp = stack->a[0];
   stack->a[0] = stack->a[1];
   stack->a[1] = tmp;
-  if (print == OPT)
+  if (print == EXEC)
     ft_printf("sa\n")
 }
 
@@ -36,7 +36,7 @@ void sb_move(t_stacks *stack, int print)
 
   if (stack->size_b == 0 || stack->size_b == 1)
   {
-    if (print == STACK)
+    if (print == ERR)
       ft_printf("Very few numbers in Stack A. Try again!\n");
     return ;
   }
@@ -44,7 +44,7 @@ void sb_move(t_stacks *stack, int print)
   tmp = stack->b[0];
   stack->b[0] = stack->b[1];
   stack->b[1] = tmp;
-  if (print == OPT)
+  if (print == EXEC)
     ft_printf("sb\n")
 }
 
@@ -55,7 +55,7 @@ void ss_move(t_stacks *stack, int print)
   if (stack->size_a == 0 || stack->size_a == 1
       || stack->size_b == 0 || stack->size_b == 1)
   {
-    if (print == STACK)
+    if (print == ERR)
       ft_printf("Very few numbers in Stack A. Try again!\n");
     return ;
   }
@@ -66,6 +66,6 @@ void ss_move(t_stacks *stack, int print)
   tmp = stack->b[0];
   stack->b[0] = stack->b[1];
   stack->b[1] = tmp;
-  if (print == OPT)
+  if (print == EXEC)
     ft_printf("ss\n")
 }

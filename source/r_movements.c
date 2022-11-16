@@ -19,7 +19,7 @@ void ra_move(t_stacks *stack, int print)
 
   if (stack->size_a == 0 || stack->size_a == 1)
   {
-    if (print == STACK)
+    if (print == ERR)
       ft_printf("Very few numbers in Stack A. Try again!");
     return ;
   }
@@ -32,7 +32,7 @@ void ra_move(t_stacks *stack, int print)
     i++;
   }
   stack->a[i - 1] = tmp;
-  if (print == OPT)
+  if (print == EXEC)
     ft_printf("ra\n");
 }
 
@@ -43,7 +43,7 @@ void rb_move(t_stacks *stack, int print)
 
   if (stack->size_b == 0 || stack->size_b == 1)
   {
-    if (print == STACK)
+    if (print == ERR)
       ft_printf("Very few numbers in Stack B. Try again!");
     return ;
   }
@@ -56,7 +56,7 @@ void rb_move(t_stacks *stack, int print)
     i++;
   }
   stack->b[i - 1] = tmp;
-  if (print == OPT)
+  if (print == EXEC)
     ft_printf("rb\n");
 }
 
@@ -68,7 +68,7 @@ void rr_move(t_stacks *stack, int print)
   if (stack->size_a == 0 || stack->size_a == 1
       || stack->size_b == 0 || stack->size_b == 1)
   {
-    if (print == STACK)
+    if (print == ERR)
       ft_printf("Very few numbers in stacks. Try again!");
     return ;
   }
@@ -82,6 +82,6 @@ void rr_move(t_stacks *stack, int print)
   while (++i < stack->size_b)
     stack->b[i - 1] = stack->b[i];
   stack->b[i - 1] = tmp;
-  if (print == OPT)
+  if (print == EXEC)
     ft_printf("rr\n");
 }
