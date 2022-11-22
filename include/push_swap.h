@@ -61,6 +61,9 @@ int push(t_stacks *stack, int len, int operation);
 void quicksort_3(t_stacks *stack, int len);
 int get_mediane(int *pivot, int *stack, int size);
 int quicksort_a(t_stacks *stack, int len, int cnt);
-int quicksort_b(t_stacks *stack, int len, int cnt)
+int quicksort_b(t_stacks *stack, int len, int cnt);
+
+//PUSH_SWAP
+void push_swap(char **argv);
 
 #endif
