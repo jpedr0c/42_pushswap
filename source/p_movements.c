@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"EXEC
+#include "../include/push_swap.h"
+
+void pa_move(t_stacks *stack, int print)
 {
   int i;
 
