@@ -15,7 +15,7 @@ SHELL			= /bin/bash
 NAME				= push_swap
 INC					= inc
 HEADER			= -I inc
-LIBFT				= libraries/libft/
+LIBFT				= libft/
 SRC_DIR			= source/
 OBJ_DIR			= object/
 CC					= gcc
@@ -60,7 +60,7 @@ $(NAME):	$(OBJ) $(OBJF)
 			@echo -e -n "$(WHITE)]$(SET_COLOR)"
 			@echo -e -n "$(L_GREEN) => 100% ✅$(SET_COLOR)\n"
 			@make -C $(LIBFT)
-			@cp libraries/libft/libft.a .
+			@cp libft/libft.a .
 			@echo -e -n "$(YELLOW)[PUSH_SWAP]:$(SET_COLOR)"
 			@$(CC) $(CFLAGS) $(OBJ) $(HEADER) libft.a -o $(NAME) 
 			@echo -e "$(L_GREEN) => Success ✅$(SET_COLOR)"
