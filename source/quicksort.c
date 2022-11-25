@@ -28,7 +28,7 @@ void quicksort_3(t_stacks *stack, int len)
     {
       if (len == 3 && stack->a[0] > stack->a[1] && stack->a[2])
         sa_move(stack, EXEC);
-      else if (len == 3 && !(stack->a[0] > stack->a[1] && stack->a[2]))
+      else if (len == 3 && !(stack->a[2] > stack->a[0] && stack->a[2] > stack->a[1]))
         len = push(stack, len, 0);
       else if (stack->a[0] > stack->a[1])
         sa_move(stack, EXEC);
@@ -66,7 +66,7 @@ int quicksort_a(t_stacks *stack, int len, int cnt)
   if (check_sorted(stack->a, len, 0) == 1)
     return (1);
   items = len;
-  if (len <=3)
+  if (len <= 3)
   {
     quicksort_3(stack, len);
     return (1);

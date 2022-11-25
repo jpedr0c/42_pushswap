@@ -42,7 +42,7 @@ int ps_atoi(char *str, int *stack)
       num = (str[i] - '0') + (num * 10);
       i++;
   }
-  if ((num > 2147483648 && neg == -1) || (num > 2147483648 && neg == 1))
+  if ((num > 2147483648 && neg == -1) || (num > 2147483647 && neg == 1))
     error(stack);
   return (num * neg);
 }
@@ -64,7 +64,7 @@ int check_sorted(int *stack, int size, int order)
 {
   int i;
 
-  if (order == 1)
+  if (order == 0)
   {
     i = 1;
     while (i < size)
@@ -94,7 +94,7 @@ void check_repeat(int *stack, int size)
   int j;
 
   i = 0;
-  j = 0;
+  j = 1;
   while (i < size)
   {
     while (j < size)
