@@ -29,7 +29,7 @@ int ps_atoi(char *str, int *stack)
   i = 0;
   neg = 1;
 
-  while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' '))
+  while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
       i++;
   if (str[i] == '-')
       neg = -1;
