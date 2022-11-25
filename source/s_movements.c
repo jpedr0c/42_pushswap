@@ -27,7 +27,7 @@ void sa_move(t_stacks *stack, int print)
   stack->a[0] = stack->a[1];
   stack->a[1] = tmp;
   if (print == EXEC)
-    ft_printf("sa\n")
+    ft_printf("sa\n");
 }
 
 void sb_move(t_stacks *stack, int print)
@@ -45,7 +45,7 @@ void sb_move(t_stacks *stack, int print)
   stack->b[0] = stack->b[1];
   stack->b[1] = tmp;
   if (print == EXEC)
-    ft_printf("sb\n")
+    ft_printf("sb\n");
 }
 
 void ss_move(t_stacks *stack, int print)
@@ -67,5 +67,5 @@ void ss_move(t_stacks *stack, int print)
   stack->b[0] = stack->b[1];
   stack->b[1] = tmp;
   if (print == EXEC)
-    ft_printf("ss\n")
+    ft_printf("ss\n");
 }
