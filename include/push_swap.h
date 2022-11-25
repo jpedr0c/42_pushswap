@@ -27,7 +27,7 @@ typedef struct s_stacks
 	int	*a;
 	int	*b;
 	int	size_a;
-	int	size_b
+	int	size_b;
 }			t_stacks;
 
 //UTILS
