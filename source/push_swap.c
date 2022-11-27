@@ -67,10 +67,10 @@ int main (int argc, char **argv)
       argv = ft_split(*argv, ' ');
     push_swap(argv);
     ft_printf("STACK A:");
-    test(argc, stack.a);
+    test(argc, stack->a);
     ft_printf("\n");
     ft_printf("STACK B:");
-    test(argc, stack.b);
+    test(argc, stack->b);
     ft_printf("\n");
     return (0);
   }
