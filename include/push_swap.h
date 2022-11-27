@@ -19,8 +19,8 @@
 # include <limits.h>
 # include <stdlib.h>
 
-# define ERR 0
-# define EXEC 1
+# define ERR 1
+# define EXEC 0
 
 typedef struct s_stacks
 {
