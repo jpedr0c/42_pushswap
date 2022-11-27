@@ -85,8 +85,7 @@ int quicksort_a(t_stacks *stack, int len, int cnt)
   }
   while (items / 2 + items % 2 != stack->size_a && cnt--)
     rra_move(stack, EXEC);
-  return (quicksort_a(stack, items / 2 + items % 2, 0)
-          && quicksort_b(stack, items / 2, 0)));
+  return (quicksort_a(stack, items / 2 + items % 2, 0) && quicksort_b(stack, items / 2, 0));
   return (1);
 }
 
@@ -121,6 +120,5 @@ int quicksort_b(t_stacks *stack, int len, int cnt)
   }
   while (items / 2 != stack->size_b && cnt--)
     rrb_move(stack, EXEC);
-  return (quicksort_a(stack, items / 2 + items % 2, 0)
-          && quicksort_b(stack, items / 2, 0));
+  return (quicksort_a(stack, items / 2 + items % 2, 0) && quicksort_b(stack, items / 2, 0));
 }
