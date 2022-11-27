@@ -77,7 +77,7 @@ int quicksort_a(t_stacks *stack, int len, int cnt)
   {
     if (stack->a[0] < pivot && (len--))
     {
-      ft_printf("Jogando para Stack B");
+      ft_printf("Jogando para Stack B ");
       pb_move(stack, EXEC);
     }
     else if (++cnt)
@@ -85,7 +85,7 @@ int quicksort_a(t_stacks *stack, int len, int cnt)
   }
   while (items / 2 + items % 2 != stack->size_a && cnt--)
     rra_move(stack, EXEC);
-  return (quicksort_a(stack, items / 2 + items % 2, 0
+  return (quicksort_a(stack, items / 2 + items % 2, 0)
           && quicksort_b(stack, items / 2, 0)));
   return (1);
 }
@@ -98,7 +98,7 @@ int quicksort_b(t_stacks *stack, int len, int cnt)
   if (!cnt && check_sorted(stack->b, len, 1) == 1)
     while (len--)
     {
-      ft_printf("Jogando para Stack A");
+      ft_printf("Jogando para Stack A ");
       pa_move(stack, EXEC);
     }
   if (len <= 3)
@@ -113,7 +113,7 @@ int quicksort_b(t_stacks *stack, int len, int cnt)
   {
     if (stack->b[0] >= pivot && len--)
     {
-      ft_printf("Jogando para Stack A");
+      ft_printf("Jogando para Stack A ");
       pa_move(stack, EXEC);
     }
     else if (++cnt)
@@ -121,6 +121,6 @@ int quicksort_b(t_stacks *stack, int len, int cnt)
   }
   while (items / 2 != stack->size_b && cnt--)
     rrb_move(stack, EXEC);
-  return (quicksort_a(stack, items / 2 + items % 2, 0) 
-          && quicksort_b(stack, items / 2, 0));   
+  return (quicksort_a(stack, items / 2 + items % 2, 0)
+          && quicksort_b(stack, items / 2, 0));
 }
