@@ -106,12 +106,15 @@ int quicksort_b(t_stacks *stack, int len, int cnt)
   while (len != items / 2)
   {
     if (stack->b[0] >= pivot && len--)
+    {
+      ft_printf("Jogando para Stack A");
       pa_move(stack, EXEC);
+    }
     else if (++cnt)
       rb_move(stack, EXEC);
   }
   while (items / 2 != stack->size_b && cnt--)
     rrb_move(stack, EXEC);
   return (quicksort_a(stack, items / 2 + items % 2, 0) 
-          && quicksort_b(stack, items / 2, 0));    
+          && quicksort_b(stack, items / 2, 0));   
 }

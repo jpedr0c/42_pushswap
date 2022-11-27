@@ -48,7 +48,6 @@ void rrb_move(t_stacks *stack, int print)
   while (i--)
     stack->b[i] = stack->b[i - 1];
   stack->b[i] = tmp;
-  stack->b[i] = tmp;
   if (print == EXEC)
     ft_printf("rrb\n");
 }
