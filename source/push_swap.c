@@ -39,6 +39,23 @@ void push_swap(char **argv)
   free(stack.b);
 }
 
+void    test(int argc, t_stack *stack)
+{
+    int    i;
+
+    i = 0;
+    ft_printf("[");
+    while (i < argc - 1)
+    {
+        ft_printf("%i", stack->aux_array[i]);
+        if (i < argc - 2)
+            ft_printf(", ");
+        i++;
+    }
+    ft_printf("] | index = %d", stack->index);
+    ft_printf(" | topo = %d\n", stack->aux_array[stack->index]);
+}
+
 int main (int argc, char **argv)
 {
   if (argc > 1)
@@ -47,6 +64,12 @@ int main (int argc, char **argv)
     if (argc == 2)
       argv = ft_split(*argv, ' ');
     push_swap(argv);
+    ft_printf("STACK A:");
+    test(argc, stack->a);
+    ft_printf("\n");
+    ft_printf("STACK B:");
+    test(argc, stack->b);
+    ft_printf("\n");
     return (0);
   }
   return (0);
