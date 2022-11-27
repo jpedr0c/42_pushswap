@@ -58,6 +58,8 @@ void    test(int argc, t_stack *stack)
 
 int main (int argc, char **argv)
 {
+  t_stacks stack;
+
   if (argc > 1)
   {
     argv++;
