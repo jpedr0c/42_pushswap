@@ -58,7 +58,7 @@ void    test(int argc, t_stacks *stack)
 
 int main (int argc, char **argv)
 {
-  t_stacks stack;
+  t_stacks *stack;
 
   if (argc > 1)
   {
