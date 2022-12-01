@@ -75,9 +75,9 @@ int sort_small_b(t_stacks *s, int len)
         sa_move(s, EXEC);
       else if (len == 1 || (len >= 2 && s->b[0] > s->b[1])
 				      || (len == 3 && s->b[0] > s->b[2]))
-        len = push(stack, len, 1);
+        len = push(s, len, 1);
       else
-        sb_move(stack, EXEC);
+        sb_move(s, EXEC);
     }
   }
   return (0);
