@@ -53,28 +53,28 @@ void sort_three_a(t_stacks *s)
     ra_move(s, EXEC);
   }
   if (s->a[0] < s->a[1] && s->a[0] > s->a[2] && s->a[1] > s->a[2])
-    rra_move(s, EXEC);  
+    rra_move(s, EXEC); 
 }
 
-int sort_small_b(t_stacks *stack, int len)
+int sort_small_b(t_stacks *s, int len)
 {
   if (len == 1)
-    pa_move(stack, EXEC);
+    pa_move(s, EXEC);
   else if (len == 2)
   {
-    if (stack->b[0] < stack->b[1])
-      sb_move(stack, EXEC);
+    if (s->b[0] < s->b[1])
+      sb_move(s, EXEC);
     while (len--)
-      pa_move(stack, EXEC);
+      pa_move(s, EXEC);
   }
   else if (len == 3)
   {
-    while (len || !(stack->a[0] < stack->a[1] && stack->a[1] < stack->a[2]))
+    while (len || !(s->a[0] < s->a[1] && s->a[1] < s->a[2]))
     {
-      if (len == 1 && stack->a[0] > stack->a[1])
-        sa_move(stack, EXEC);
-      else if (len == 1 || (len >= 2 && stack->b[0] > stack->b[1])
-             || (len == 3 && stack->b[0] > stack->b[2]))
+      if (len == 1 && s->a[0] > s->a[1])
+        sa_move(s, EXEC);
+      else if (len == 1 || (len >= 2 && s->b[0] > s->b[1])
+				      || (len == 3 && s->b[0] > s->b[2]))
         len = push(stack, len, 1);
       else
         sb_move(stack, EXEC);

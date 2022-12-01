@@ -52,8 +52,7 @@ void ss_move(t_stacks *stack, int print)
 {
   int tmp;
 
-  if (stack->size_a == 0 || stack->size_a == 1
-      || stack->size_b == 0 || stack->size_b == 1)
+  if (stack->size_a == 0 || stack->size_a == 1 || (stack->size_b == 0 || stack->size_b == 1))
   {
     if (print == ERR)
       ft_printf("Very few numbers in Stack A. Try again!\n");

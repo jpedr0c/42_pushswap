@@ -24,11 +24,12 @@ void quicksort_3(t_stacks *stack, int len)
   else if (len == 3)
   {
     while (len != 3 || !(stack->a[0] < stack->a[1]
-          && stack->a[1] < stack->a[2]))
+				&& stack->a[1] < stack->a[2]))
     {
       if (len == 3 && stack->a[0] > stack->a[1] && stack->a[2])
         sa_move(stack, EXEC);
-      else if (len == 3 && !(stack->a[2] > stack->a[0] && stack->a[2] > stack->a[1]))
+      else if (len == 3 && !(stack->a[2] > stack->a[0]
+					&& stack->a[2] > stack->a[1]))
         len = push(stack, len, 0);
       else if (stack->a[0] > stack->a[1])
         sa_move(stack, EXEC);
