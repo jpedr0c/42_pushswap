@@ -1,3 +1,9 @@
+<p align="center">
+<a href="https://github.com/jpedr0c/42_pushswap">
+<img src="./push_swap.png" height="150" width="150">
+</a>
+</p>
+
 <h1 align=center>
   <strong> PUSH_SWAP </strong>
 </h1>
